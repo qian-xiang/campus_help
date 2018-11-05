@@ -1,7 +1,7 @@
-<?php
+﻿<?php
 
 namespace App\Http\Controllers\Beikaobaodian;
-
+//这是一个测试注释
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use App\Source;

@@ -18,4 +18,4 @@ Route::get('/', function () {
 Route::get('/beikaobaodian/search/search_source', 'Beikaobaodian\Search@search_source');
 Route::post('beikaobaodian/search/accept_source', 'Beikaobaodian\Search@accept_source');
 Route::get('beikaobaodian/search/send_email', 'Beikaobaodian\Search@send_email');
-Route::post('test', 'Test@index');
+Route::any('test', 'Test@index');

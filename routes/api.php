@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/qianxiangqunguan/checkexperienceuser', 'Api\GroupManagement@checkExperienceUser');
 Route::post('/qianxiangqunguan/checkexformaluser', 'Api\GroupManagement@checkFormalUser');
 Route::post('/qianxiangqunguan/add-experience', 'Api\GroupManagement@addExperience');
+
+Route::post('/campus_help/handleWx', 'Api\Campus_help\Index@handleWx');
+Route::post('/campus_help/showData', 'Api\Campus_help\Index@showData');

@@ -196,9 +196,7 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
 
         array_multisort($statusSortArray,SORT_ASC,SORT_NUMERIC,$timeSortArray,SORT_ASC,SORT_NUMERIC,$helpCountSortArray,SORT_DESC,SORT_NUMERIC,$receive);
 
-        echo json_encode(['recordArray'=>$receive,'error'=>$error]);
-
-        $redis->close();
+        return ['recordArray'=>$receive,'error'=>$error];
 
 
     }
@@ -269,7 +267,7 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
             }
 
             if ($result[0]['user_head_image']!=$headImage) {
-                $sql = "insert into campus_user(user_head_image) values(?)";
+//                $sql = "insert into campus_user(user_head_image) values(?)";
                 $campus_user->headImage = $headImage;
                 $errorType = '头像';
             }
@@ -311,6 +309,34 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
             //******uid为唯一的可查询到关键信息的索引***********
             return ['uidIndex'=>$fields];
 
+    }
+
+    public  function  checkSchool(Request $request){
+        //*********判断来源是否合法****************
+        if(!checkReferer()){
+            return ['error'=>'非法访问:Reference'];
+        }
+
+        $uidIndex = $request->uidIndex;
+        if (!$uidIndex){
+            return ['error'=>'非法访问:uidIndex->1'];
+        }
+        if (is_null($uidIndex) || strlen(trim($uidIndex))==0) {
+            return ['error'=>'非法访问:uidIndex->2'];
+        }
+
+        //*********通过索引获取用户的唯一ID********************
+        $uid = Redis::hget('uid',$uidIndex);
+        if (!$uid){
+            return ['error'=>'用户ID索引不存在'];
+        }
+//       $sql = "select user_school from campus_user where user_unique_id=?";
+        $user_school = Campus_user::where(['user_unique_id'=>$uid])->first(['user_school']);
+        dump($user_school);
+        if (!$user_school){
+            return ['error'=>'检测到您尚未在【个人中心】的【我的资料】设置学校名称，请前往设置。'];
+        }
+        return ['school'=>$user_school];
     }
 
 }

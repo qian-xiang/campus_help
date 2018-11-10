@@ -14,7 +14,6 @@ class Index extends Controller
      */
     public function showData(Request $request){
         $referer = checkReferer();
-
         if(!$referer){
             return ['error'=>'origin:非法访问'];
         }

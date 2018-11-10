@@ -27,7 +27,7 @@
         "psr-4": {
             "App\\": "app/"
         },
-        "files":["app/common/Functions.php"]
+        "files":["app/Common/Functions.php"]
     },
     "autoload-dev": {
         "psr-4": {

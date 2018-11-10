@@ -17,7 +17,7 @@ class ComposerStaticInit3e6709b351b1805c0a13a27e30f6676f
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
-        'c825d9946408dacf7edc20558ccf7918' => __DIR__ . '/../..' . '/app/common/Functions.php',
+        'f3c07e365329827339c27eb657c0fb73' => __DIR__ . '/../..' . '/app/Common/Functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -333,12 +333,14 @@ class ComposerStaticInit3e6709b351b1805c0a13a27e30f6676f
     );
 
     public static $classMap = array (
+        'App\\Campus_posted' => __DIR__ . '/../..' . '/app/Campus_posted.php',
+        'App\\Campus_user' => __DIR__ . '/../..' . '/app/Campus_user.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Experience_qianxiang_group_management' => __DIR__ . '/../..' . '/app/Experience_qianxiang_group_management.php',
         'App\\Formal_qianxiang_group_management' => __DIR__ . '/../..' . '/app/Formal_qianxiang_group_management.php',
         'App\\Http\\Controllers\\Api\\GroupManagement' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/GroupManagement.php',
-        'App\\Http\\Controllers\\Api\\Index' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Index.php',
+        'App\\Http\\Controllers\\Api\\Index' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Campus_help/Index.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',

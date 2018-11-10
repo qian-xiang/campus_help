@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Beikaobaodian;
 
 use Illuminate\Routing\Controller;

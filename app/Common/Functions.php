@@ -1,5 +1,4 @@
 <?php
-namespace App\common;
 /**
  * checkReferer 验证来源是否合法
  * @return boolean 合法返回真，否则返回假

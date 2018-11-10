@@ -1,5 +1,4 @@
 ﻿<?php
-
 namespace App\Http\Controllers\Beikaobaodian;
 //这是一个再次测试注释
 use Illuminate\Routing\Controller;

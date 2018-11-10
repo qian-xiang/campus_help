@@ -1,5 +1,4 @@
 <?php
-//主页的控制器
 namespace App\Http\Controllers\Api;
 
 use Illuminate\Routing\Controller;
@@ -239,7 +238,7 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
             //作为源码输出而不是直接输出网页
             CURLOPT_RETURNTRANSFER=>true
         ];
-        curl_setopt_array($wantSendDataArray);
+        curl_setopt_array($wantSendDataArray,$ch);
         $output = curl_exec($ch);//获取数据
         if (!$output){
             return ['error'=>'执行curl失败：'.curl_error($ch)];

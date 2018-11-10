@@ -6,12 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Campus_posted' => $baseDir . '/app/Campus_posted.php',
+    'App\\Campus_user' => $baseDir . '/app/Campus_user.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Experience_qianxiang_group_management' => $baseDir . '/app/Experience_qianxiang_group_management.php',
     'App\\Formal_qianxiang_group_management' => $baseDir . '/app/Formal_qianxiang_group_management.php',
     'App\\Http\\Controllers\\Api\\GroupManagement' => $baseDir . '/app/Http/Controllers/Api/GroupManagement.php',
-    'App\\Http\\Controllers\\Api\\Index' => $baseDir . '/app/Http/Controllers/Api/Index.php',
+    'App\\Http\\Controllers\\Api\\Index' => $baseDir . '/app/Http/Controllers/Api/Campus_help/Index.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',

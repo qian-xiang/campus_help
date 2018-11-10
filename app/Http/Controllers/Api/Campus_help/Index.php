@@ -239,10 +239,8 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
             CURLOPT_RETURNTRANSFER=>true
         ];
         curl_setopt_array($ch,$wantSendDataArray);
-        $output = curl_exec($ch);//获取数据
-        if (!$output){
-            return ['error'=>'执行curl失败：'.curl_error($ch)];
-        }
+        $result = curl_exec($ch);//获取数据
+
         curl_close($ch);//关闭curl
 
         //判断用户唯一Id是否在用户表存在，如果不存在，则插入该ID、昵称和头像,邮箱和学校置为空字符串

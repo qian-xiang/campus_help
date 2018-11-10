@@ -24,7 +24,7 @@ class Campus_user extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id','user_username','user_email','user_school',
-        'user_head_img','user_regtime','user_last_time','user_current_time',
+    protected $fillable = ['user_id','user_unique_id','user_nickname','user_email','user_school',
+        'user_head_image','user_regtime','user_last_time','user_current_time',
         'user_token','user_token_time','user_status','user_reg_ip','user_last_ip','user_current_ip'];
 }

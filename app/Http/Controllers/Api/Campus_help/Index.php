@@ -240,7 +240,7 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
         ];
         curl_setopt_array($ch,$wantSendDataArray);
         $result = curl_exec($ch);//获取数据
-
+        $result = json_decode($result,true);
         curl_close($ch);//关闭curl
 
         //判断用户唯一Id是否在用户表存在，如果不存在，则插入该ID、昵称和头像,邮箱和学校置为空字符串
@@ -252,9 +252,9 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
 
         if (count($result)==0) {
             //不存在则插入
-            $campus_user->uniqid = $uniqid;
-            $campus_user->nickName = $nickName;
-            $campus_user->headImage = $headImage;
+            $campus_user->user_unique_id = $uniqid;
+            $campus_user->user_nickname = $nickName;
+            $campus_user->user_head_image = $headImage;
             $res_save = $campus_user->save();
             if (!$res_save){
                 return ['error'=>'保存账户信息出现错误'];

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b70b3085-2db9-4814-8989-db7536fca3d9" name="Default Changelist" comment="部分整合后的第一次微信开发工具测试">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/OfferSource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/OfferSource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/Search.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/Search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/common/Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Common/Functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,14 +50,14 @@
         <counts>
           <entry key="env" value="12" />
           <entry key="json" value="24" />
-          <entry key="php" value="1025" />
+          <entry key="php" value="1041" />
           <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="24" />
-          <entry key="PHP" value="1022" />
+          <entry key="PHP" value="1038" />
           <entry key="PLAIN_TEXT" value="41" />
           <entry key="SQL" value="3" />
         </counts>
@@ -75,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="226" column="9" lean-forward="true" selection-start-line="226" selection-start-column="9" selection-end-line="226" selection-end-column="9" />
+            <state relative-caret-position="125">
+              <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
             </state>
           </provider>
         </entry>
@@ -84,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+            <state relative-caret-position="525">
+              <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -394,12 +388,12 @@
       <workItem from="1541692591219" duration="164000" />
       <workItem from="1541770917880" duration="164000" />
       <workItem from="1541771259850" duration="5915000" />
-      <workItem from="1541822088900" duration="165000" />
+      <workItem from="1541822088900" duration="760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24077000" />
+    <option name="totallyTimeSpent" value="24672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -532,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/GroupManagement.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -560,10 +547,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="24" column="63" lean-forward="true" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="226" column="9" lean-forward="true" selection-start-line="226" selection-start-column="9" selection-end-line="226" selection-end-column="9" />
+        <state relative-caret-position="125">
+          <caret line="204" lean-forward="true" selection-start-line="204" selection-end-line="204" />
         </state>
       </provider>
     </entry>

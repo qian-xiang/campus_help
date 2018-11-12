@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b70b3085-2db9-4814-8989-db7536fca3d9" name="Default Changelist" comment="部分整合后的第一次微信开发工具测试" />
+    <list default="true" id="b70b3085-2db9-4814-8989-db7536fca3d9" name="Default Changelist" comment="部分整合后的第一次微信开发工具测试">
+      <change beforePath="$PROJECT_DIR$/public/images/published/test.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/campus_help/published/test.jpeg" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -416,12 +418,12 @@
       <workItem from="1541836399095" duration="6837000" />
       <workItem from="1541901826867" duration="11175000" />
       <workItem from="1541951643877" duration="1361000" />
-      <workItem from="1541987896829" duration="4826000" />
+      <workItem from="1541987896829" duration="4853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51213000" />
+    <option name="totallyTimeSpent" value="51240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />

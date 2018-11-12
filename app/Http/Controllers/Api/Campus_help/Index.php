@@ -37,167 +37,110 @@ class Index extends Controller
         if (!$pageNumber){
             return ['error'=>'非法访问：pageNumber'];
         }
-        $recordCount = $pageNumber * $pageContainer;
-
 /*        $sql = "select posted_id,posted_unique_id,user_nickname,user_head_image,
 posted_title,posted_is_upload_img,posted_sort,posted_reward,posted_status,posted_time
 from campus_posted inner join campus_user on user_unique_id = posted_unique_id
 where posted_school=? order by posted_status asc,posted_time desc limit 0,$recordCount";*/
-
-//        $paramsType ='s';
-//        $paramsValue = [$school];
-//        $params = [$sql,$paramsType,$paramsValue];
-//
-//        $result = $sqlAssistant->safeDql($params);
-
-        $result = Campus_posted::where(['posted_school'=>$school])->orderBy('posted_status','ASC')->orderBy('posted_time','DESC')
-            ->paginate(5)->toArray();
-        if (count($result)==0) {
-           return ['error'=>'没有您当前所在学校的帖子。若已登录，请确认是否在个人中心->我的资料设置要浏览的了学校名称。'];
+        $result = Campus_posted::where(['posted_school'=>$school])->orderBy('posted_status','ASC')
+            ->orderBy('posted_time','DESC')->paginate($pageContainer,['posted_id as id','posted_unique_id as unique_id',
+                'user_nickname as nickname','user_head_image as head_image','posted_title as title','posted_is_upload_img as is_upload_img'
+                ,'posted_sort as sort', 'posted_reward as reward','posted_status as status','posted_time as time'])->toArray();
+        if (count($result['data']) === 0){
+            return ['error'=>'没有您当前所在学校的帖子。若已登录，请确认是否在个人中心->我的资料设置要浏览的了学校名称。'];
         }
-        return ;
-        $error='';
 
+        $error='';
         $receive = array();
 
         for ($i=0; $i < count($result); $i++) {
-
             foreach ($result[$i] as $key => $realValue) {
-                //循环的时候是用户表字段时
-                if (strpos($key, 'posted_')===false) {
-
-                    $wantedKey = substr($key, 5);
-
-                }else{
-
-                    $wantedKey = substr($key, 7);
-
-                    switch ($key) {
-
-                        case 'posted_time':
-                            //计算帖子距离当天的时间  格式：几天前
-                            $currentTime = time();
-                            //向下取整
-                            $realValue = floor(($currentTime - $realValue)/(60*60*24));
-                            //格式化时间
-                            // $realValue = date('Y-m-d',$realValue);
-                            $realValue = $realValue <= 0 ? '今天' : $realValue.'天前';
-
-                            break;
-                        case 'posted_status':
-
-                            $realValue = $realValue == 1 ? '已结帖':'未结帖';
-
-                            break;
-
-                        case 'posted_is_upload_img':
-
-                            if ($realValue == 1) {
-
-                                $filesArray = array();
-                                //列出存储帖子图片的文件夹下的所有图片
-
-                                if ($handle = opendir('../../posted/images/'.$result[$i]['posted_id'])){
-                                    while (($filename = readdir($handle))!==false) {
-                                        //*********排除隐藏文件************
-                                        if ($filename!=='.' && $filename!=='..') {
-                                            $filesArray[] = $filename;
-                                        }
+                switch ($key) {
+                    case 'posted_time':
+                        //计算帖子距离当天的时间  格式：几天前
+                        $currentTime = time();
+                        //向下取整
+                        $realValue = floor(($currentTime - $realValue)/(60*60*24));
+                        //格式化时间
+                        // $realValue = date('Y-m-d',$realValue);
+                        $realValue = $realValue <= 0 ? '今天' : $realValue.'天前';
+                        break;
+                    case 'posted_status':
+                        $realValue = $realValue == 1 ? '已结帖':'未结帖';
+                        break;
+                    case 'posted_is_upload_img':
+                        if ($realValue !== 1) {
+                            $realValue=[];
+                        }else{
+                            $filesArray = array();
+                            //列出存储帖子图片的文件夹下的所有图片
+                            if ($handle = opendir('./images/published/'.$result[$i]['posted_id'])){
+                                while (($filename = readdir($handle))!==false) {
+                                    //*********排除隐藏文件************
+                                    if ($filename!=='.' && $filename!=='..') {
+                                        $filesArray[] = $filename;
                                     }
-                                    closedir($handle);
                                 }
-
-                                $realValue = $filesArray;
-
-                            }else{
-
-                                $realValue=[];
+                                closedir($handle);
                             }
+                            $realValue = $filesArray;
+                        }
+                        break;
+                    case 'posted_id':
+                        //获取该id在Redis中的记录数,该ID在哈希中的值是数组形式 并判断用户ID是否在该帖的【喜欢】中
+                        $arr = Redis::hget('favorite', $realValue);
+                        $arr = json_decode($arr,true);
+                        if (!$arr) {
+                            $isFavorite = false;
+                        }else{
+                            //判断用户ID是否在该帖的【喜欢】中
+                            $isFavorite = in_array($uid, $arr) ? true : false ;
+                        }
+                        $favoriteCount = count($arr);
+                        $arr = Redis::hget('topRecord', $realValue);
+                        $arr = json_decode($arr,true);
+                        //判断用户ID是否在该帖的【顶】中
+                        if (!$arr) {
+                            $isTopRecord = false;
+                        }else{
+                            //判断用户ID是否在该帖的【喜欢】中
+                            $isTopRecord = in_array($uid, $arr) ? true : false ;
+                        }
+                        $topRecordCount = count($arr);
+                        //*******获取帖子的浏览量**********
+                        $arr = Redis::hget('browseCount',$realValue);
+                        $arr = json_decode($arr,true);
+                        $browseCount = count($arr);
 
-
-                            break;
-
-                        case 'posted_id':
-
-                            //获取该id在Redis中的记录数,该ID在哈希中的值是数组形式 并判断用户ID是否在该帖的【喜欢】中
-                            $arr = $redis->hGet('favorite', $realValue);
+                        //*******获取帖子的助力数**********
+                        $arr = Redis::hget('help',$result[$i]['posted_unique_id']);
+                        if ($arr===false) {
+                            $helpCount = 0;
+                        }else{
                             $arr = json_decode($arr,true);
-                            if (!$arr) {
-                                $isFavorite = false;
-                            }else{
-                                //判断用户ID是否在该帖的【喜欢】中
-                                $isFavorite = in_array($uid, $arr) ? true : false ;
-                            }
-
-                            $favoriteCount = count($arr);
-
-                            $arr = $redis->hGet('topRecord', $realValue);
-                            $arr = json_decode($arr,true);
-                            //判断用户ID是否在该帖的【顶】中
-                            if (!$arr) {
-                                $isTopRecord = false;
-                            }else{
-                                //判断用户ID是否在该帖的【喜欢】中
-                                $isTopRecord = in_array($uid, $arr) ? true : false ;
-                            }
-                            $topRecordCount = count($arr);
-
-                            //*******获取帖子的浏览量**********
-                            $arr = $redis->hGet('browseCount',$realValue);
-                            $arr = json_decode($arr,true);
-                            $browseCount = count($arr);
-
-                            //*******获取帖子的助力数**********
-                            $arr = $redis->hGet('help',$result[$i]['posted_unique_id']);
-                            if ($arr===false) {
-
-                                $helpCount = 0;
-
-                            }else{
-                                $arr = json_decode($arr,true);
-
-                                $helpCount = array_key_exists($realValue,$arr) ? count($arr[$realValue]) : 0;
-                            }
-
-                            //*********将记录数添加到数组中************
-                            $receive[$i]['favoriteCount'] = $favoriteCount;
-                            $receive[$i]['isFavorite'] = $isFavorite;
-                            $receive[$i]['topRecordCount'] = $topRecordCount;
-                            $receive[$i]['isTopRecord'] = $isTopRecord;
-                            $receive[$i]['browseCount'] = $browseCount;
-                            $receive[$i]['helpCount'] = $helpCount;
-
-                            break;
-
-                        default:
-                            # code...
-                            break;
-                    }
-
+                            $helpCount = array_key_exists($realValue,$arr) ? count($arr[$realValue]) : 0;
+                        }
+                        //*********将记录数添加到数组中************
+                        $receive[$i]['favoriteCount'] = $favoriteCount;
+                        $receive[$i]['isFavorite'] = $isFavorite;
+                        $receive[$i]['topRecordCount'] = $topRecordCount;
+                        $receive[$i]['isTopRecord'] = $isTopRecord;
+                        $receive[$i]['browseCount'] = $browseCount;
+                        $receive[$i]['helpCount'] = $helpCount;
+                        break;
+                    default:
+                        # code...
+                        break;
                 }
-
-                if ($wantedKey !='unique_id') {
-
-                    $receive[$i][$wantedKey] = $realValue;
-
-                }
-
-
             }
-
             //**********状态排序数组**************
             $statusSortArray[$i] = $receive[$i]['status'];
             //**********发帖时间排序数组**************
             $timeSortArray[$i] = $receive[$i]['time'];
             //**********求助量排序数组**************
             $helpCountSortArray[$i] = $receive[$i]['helpCount'];
-        }
-
+     }
         array_multisort($statusSortArray,SORT_ASC,SORT_NUMERIC,$timeSortArray,SORT_ASC,SORT_NUMERIC,$helpCountSortArray,SORT_DESC,SORT_NUMERIC,$receive);
-
         return ['recordArray'=>$receive,'error'=>$error];
-
-
     }
 
     public function  handleWx(Request $request){
@@ -315,7 +258,6 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
         if(!checkReferer()){
             return ['error'=>'非法访问:Reference'];
         }
-
         $uidIndex = $request->uidIndex;
         if (!$uidIndex){
             return ['error'=>'非法访问:uidIndex->1'];
@@ -330,12 +272,12 @@ where posted_school=? order by posted_status asc,posted_time desc limit 0,$recor
             return ['error'=>'用户ID索引不存在'];
         }
 //       $sql = "select user_school from campus_user where user_unique_id=?";
-        $user_school = Campus_user::where(['user_unique_id'=>$uid])->first(['user_school']);
-        dump($user_school);
-        if (!$user_school){
+        $user_school = Campus_user::where(['user_unique_id'=>$uid])->first(['user_school'])->toArray();
+        $school = $user_school['user_school'];
+        if (!$school){
             return ['error'=>'检测到您尚未在【个人中心】的【我的资料】设置学校名称，请前往设置。'];
         }
-        return ['school'=>$user_school];
+        return ['school'=>$school];
     }
 
 }

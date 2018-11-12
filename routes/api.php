@@ -24,3 +24,5 @@ Route::post('/qianxiangqunguan/add-experience', 'Api\GroupManagement@addExperien
 Route::post('/campus_help/handleWx', 'Api\Campus_help\Index@handleWx');
 Route::post('/campus_help/showData', 'Api\Campus_help\Index@showData');
 Route::post('/campus_help/checkSchool', 'Api\Campus_help\Index@checkSchool');
+Route::post('/campus_help/getUserInformation', 'Api\Campus_help\Owner@getUserInformation');
+Route::post('/campus_help/modifyInformation', 'Api\Campus_help\Owner@modifyInformation');

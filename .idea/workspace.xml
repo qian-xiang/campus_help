@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b70b3085-2db9-4814-8989-db7536fca3d9" name="Default Changelist" comment="部分整合后的第一次微信开发工具测试">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="b70b3085-2db9-4814-8989-db7536fca3d9" name="Default Changelist" comment="部分整合后的第一次微信开发工具测试" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,12 +308,6 @@
             <path>
               <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="LaravelTimeLetter" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LaravelTimeLetter" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -427,16 +416,15 @@
       <workItem from="1541836399095" duration="6837000" />
       <workItem from="1541901826867" duration="11175000" />
       <workItem from="1541951643877" duration="1361000" />
-      <workItem from="1541987896829" duration="3733000" />
+      <workItem from="1541987896829" duration="4233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50120000" />
+    <option name="totallyTimeSpent" value="50620000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2935657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

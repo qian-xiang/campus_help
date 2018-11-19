@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Campus_posted extends Model
+class Campus_accusation extends Model
 {
     protected $connection = 'mysql';
     /**
@@ -12,8 +12,10 @@ class Campus_posted extends Model
      *
      * @var string
      */
-    protected $table = 'campus_posted';
-    protected $primaryKey = 'posted_id';
+    protected $table = 'campus_accusation';
+
+    //指定主键
+    protected $primaryKey = 'accusation_id';
     /**
      * 该模型是否被自动维护时间戳
      *
@@ -25,7 +27,6 @@ class Campus_posted extends Model
      *
      * @var array
      */
-    protected $fillable = ['posted_id','posted_unique_id','user_nickname','user_head_image',
-        'posted_title','posted_is_upload_img','posted_sort','posted_reward','posted_status','posted_time'];
-
+    protected $fillable = ['accusation_id','accusation_post_id',
+        'accusation_unique_id','accusation_type','accusation_content','accusation_status'];
 }

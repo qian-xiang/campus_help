@@ -1,4 +1,6 @@
 <?php
+namespace App\Http\Controllers\Api\Campus_help;
+
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
@@ -11,7 +13,7 @@ class Publish extends Controller
      * Publish constructor.
      * @param Request $request
      */
-    public function publish(Request $request){
+    public function post(Request $request){
         $referer = checkReferer();
         if(!$referer){
             return ['error'=>'origin:非法访问'];
@@ -39,7 +41,7 @@ class Publish extends Controller
 
         //*********通过索引获取用户的唯一ID********************
 
-        $uid = Redis::hget('uid',$uniqueId);
+        $uid = Redis::hget('uid',$uidIndex);
         if (!$uid){
             return ['error'=>'用户ID索引不存在'];
         }
@@ -68,10 +70,9 @@ class Publish extends Controller
 
         $result = $campus_posted->save();
 //        $sql = "insert into campus_posted (posted_id,posted_unique_id,posted_title,posted_content,posted_school,posted_is_upload_img,posted_sort,posted_reward,posted_contact,posted_status,posted_time) values(0,?,?,?,?,?,?,?,?,0,$postTime)";
-
         if ($result) {
             //*******判断图片路径是否存在
-            if ($isChoosedImg == 1) {
+            if ($isChoosedImg === 1) {
                 $arr['msg'] = '帖子信息发表完毕，接下来准备上传图片...';
                 //将刚刚插入记录的ID返回并使用base64加密，加强信息安全
                 $arr['returnId'] = base64_encode($campus_posted->posted_id);
@@ -82,8 +83,66 @@ class Publish extends Controller
         }else{
             $arr['error'] = 'fail：insert';
         }
-
         return $arr;
+    }
+    public function postImagesUpload(Request $request){
+        $referer = checkReferer();
+        if(!$referer){
+            return ['error'=>'origin:非法访问'];
+        }
 
+        $sendType = $request->sendType;
+        if (!$sendType){
+            return ['res'=>'非法访问！'];
+        }
+        $num = $request->num;
+        if (!$num){
+            return ['res'=>'非法访问！'];
+        }
+        $postedId = $request->postedId;
+        if (!$postedId){
+            return ['res'=>'发帖失败'];
+        }
+        //定义存放上传过来的文件的路径,要真是存在的
+        $file_dir = './images/campus_help/published/';
+
+        $wantCreatedDir = $file_dir.base64_decode($postedId);
+        if (!file_exists($wantCreatedDir)) {
+            mkdir($wantCreatedDir,0777);
+            chmod($wantCreatedDir, 0777);
+        }
+
+        //传过来的文件的name属性
+        $ipt_name = 'postImg';
+
+        //取所有上传的文件
+        $files = $_FILES[$ipt_name];
+
+        ob_clean();
+        //创建以用户ID命名的、以识别图片是哪个用户发表的目录
+
+        // $uploadFile = $file_dir .$files['name'][$i];
+        // $uploadFile = $createdDir.'/'.$files['name'];
+        $size = $files['size'];
+
+        //限制上传的图片大小为2M
+        if ($size >2*1024*1024) {
+            return ['res'=>'图片大小超过2M'];
+        }
+
+        $filename = basename($files['name']);
+        //对文件名进行GB2312编码，原来是UTF-8，防止中文文件名乱码
+        $pos = strrpos($filename, '.');
+
+        //*******取文件后缀,带.号**********
+        $suffix = substr($filename,$pos);
+
+        $enc_name = iconv('UTF-8', 'GB2312',$wantCreatedDir.'/'.$_POST['num'].$suffix);
+
+        //将上传的文件移动到指定文件夹
+        $res = move_uploaded_file($files['tmp_name'], $enc_name);
+        $arr = array();
+        $arr['msg'] = $res ? '上传成功' : '上传失败';
+        return $arr;
     }
 }

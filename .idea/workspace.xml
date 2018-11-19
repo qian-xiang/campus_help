@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b70b3085-2db9-4814-8989-db7536fca3d9" name="Default Changelist" comment="部分整合后的第一次微信开发工具测试">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Publish.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Campus_accusation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Campus_question.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Help.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/UserAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Campus_posted.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Campus_posted.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Publish.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Publish.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,51 +29,70 @@
     <session id="298804767">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="28" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.125" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.135" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.41" value="2" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.61" value="1" />
+          <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.65" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="4" />
-          <entry key="html" value="1" />
+          <entry key="html" value="2" />
           <entry key="json" value="3" />
-          <entry key="php" value="38" />
+          <entry key="php" value="96" />
+          <entry key="wxss" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="Blade" value="2" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="2" />
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="38" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PHP" value="94" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="dummy" value="1" />
           <entry key="env" value="17" />
+          <entry key="html" value="268" />
           <entry key="json" value="24" />
-          <entry key="php" value="3358" />
+          <entry key="php" value="9124" />
           <entry key="txt" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Blade" value="71" />
+          <entry key="HTML" value="268" />
           <entry key="JSON" value="24" />
-          <entry key="PHP" value="3355" />
-          <entry key="PLAIN_TEXT" value="46" />
-          <entry key="SQL" value="3" />
+          <entry key="PHP" value="9008" />
+          <entry key="PLAIN_TEXT" value="47" />
+          <entry key="SQL" value="45" />
         </counts>
       </usages-collector>
     </session>
@@ -71,10 +100,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="4550">
+              <caret line="187" selection-start-line="187" selection-end-line="187" />
               <folding>
                 <element signature="e#55#89#0#PHP" expanded="true" />
               </folding>
@@ -83,31 +112,54 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/publish/post.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="866">
-              <caret line="95" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="95" />
+            <state relative-caret-position="400">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Publish.php">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="325">
+              <caret line="22" column="33" selection-end-line="22" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/WAMP/Apache/Apache24/htdocs/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
               <folding>
-                <element signature="e#6#40#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/index/showData.php">
+        <entry file="file://E:/微信web开发者工具/project/agency/pages/formateColorui.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="196" column="5" lean-forward="true" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+            <state relative-caret-position="-211">
+              <caret line="1295" column="13" lean-forward="true" selection-start-line="1295" selection-start-column="13" selection-end-line="1295" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -115,59 +167,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Http/Controllers/Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="1500">
+              <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
               <folding>
-                <element signature="e#39#67#0#PHP" expanded="true" />
+                <element signature="e#39#59#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-              <folding>
-                <element signature="e#55#89#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/getUserInformation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Campus_posted.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="26" column="37" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Campus_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            <state relative-caret-position="1075">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
@@ -177,6 +190,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>uniqid</find>
+      <find>status</find>
+      <find>$receive[$i]['status']</find>
+      <find>getHelpData</find>
+      <find>publish</find>
+      <find>article-list-title</find>
+      <find>article-list-li</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,11 +205,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Campus_posted.php" />
         <option value="E:/WAMP/Apache/Apache24/htdocs/index.php" />
         <option value="E:/WAMP/Apache/Apache24/htdocs/campus_help/php/registerAndLogin/handleWx.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Index.php" />
-        <option value="E:/WAMP/Apache/Apache24/htdocs/index.html" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/Search.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/OfferSource.php" />
         <option value="$PROJECT_DIR$/app/common/Functions.php" />
@@ -198,12 +215,29 @@
         <option value="$PROJECT_DIR$/app/Campus_user.php" />
         <option value="E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/routes/web.php" />
         <option value="E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php" />
         <option value="E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Campus_user.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" />
+        <option value="E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Campus_posted.php" />
+        <option value="E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/CampusUser.php" />
+        <option value="E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/deleteRequiredRecord.php" />
+        <option value="E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/confirmFinish.php" />
+        <option value="$PROJECT_DIR$/app/Campus_question.php" />
+        <option value="E:/WAMP/Apache/Apache24/htdocs/campus_help/php/search/getKeyWords.php" />
         <option value="E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Http/Controllers/Test.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Publish.php" />
+        <option value="$PROJECT_DIR$/app/Campus_accusation.php" />
+        <option value="E:/WAMP/Apache/Apache24/htdocs/campus_help/php/help/getHelpData.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Help.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Publish.php" />
+        <option value="$PROJECT_DIR$/app/Campus_posted.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/UserAction.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Search.php" />
+        <option value="$PROJECT_DIR$/resources/views/Index.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="E:/WAMP/Apache/Apache24/htdocs/index.html" />
+        <option value="E:/微信web开发者工具/project/agency/pages/formateColorui.wxss" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
       </list>
     </option>
   </component>
@@ -298,9 +332,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1750" />
+    <option name="x" value="180" />
+    <option name="y" value="115" />
+    <option name="width" value="1585" />
     <option name="height" value="970" />
   </component>
   <component name="ProjectView">
@@ -324,12 +358,6 @@
               <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="LaravelTimeLetter" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LaravelTimeLetter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -342,19 +370,13 @@
             <path>
               <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="LaravelTimeLetter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="LaravelTimeLetter" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Api" type="462c0819:PsiDirectoryNode" />
-              <item name="Campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
@@ -385,6 +407,42 @@
               <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="campus_help" type="462c0819:PsiDirectoryNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="accusation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="detail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="function" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="help" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="owner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
               <item name="publish" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -397,7 +455,19 @@
               <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="campus_help" type="462c0819:PsiDirectoryNode" />
               <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LaravelTimeLetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="campus_help" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="userAction" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -456,18 +526,32 @@
       <workItem from="1541836399095" duration="6837000" />
       <workItem from="1541901826867" duration="11175000" />
       <workItem from="1541951643877" duration="1361000" />
-      <workItem from="1541987896829" duration="9292000" />
+      <workItem from="1541987896829" duration="15835000" />
+      <workItem from="1542008424612" duration="3010000" />
+      <workItem from="1542016788605" duration="15031000" />
+      <workItem from="1542079565716" duration="5414000" />
+      <workItem from="1542087383070" duration="793000" />
+      <workItem from="1542100350364" duration="6745000" />
+      <workItem from="1542121708783" duration="1686000" />
+      <workItem from="1542196100163" duration="8376000" />
+      <workItem from="1542294222633" duration="1485000" />
+      <workItem from="1542347464242" duration="4283000" />
+      <workItem from="1542366284627" duration="8551000" />
+      <workItem from="1542382469594" duration="1435000" />
+      <workItem from="1542432065345" duration="4780000" />
+      <workItem from="1542506585835" duration="15317000" />
+      <workItem from="1542551933076" duration="4560000" />
+      <workItem from="1542590913890" duration="3342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55679000" />
+    <option name="totallyTimeSpent" value="147030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2935657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33109918" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -482,7 +566,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32907802" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -500,65 +584,18 @@
     <MESSAGE value="部分整合后的第一次微信开发工具测试" />
     <option name="LAST_COMMIT_MESSAGE" value="部分整合后的第一次微信开发工具测试" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/UserAction.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Experience_qianxiang_group_management.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="7" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/wxmessage/receivedWxMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-709" />
-      </provider>
-    </entry>
-    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/wxmessage/wx_sample.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200" />
-      </provider>
-    </entry>
-    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4657">
-          <caret line="2331" selection-start-line="2331" selection-end-line="2331" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/Search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Beikaobaodian/OfferSource.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -629,34 +666,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Campus_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-          <folding>
-            <element signature="e#55#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/getUserInformation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Campus_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -667,54 +680,280 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Http/Controllers/Test.php">
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/index/showData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#39#67#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="151" lean-forward="true" selection-start-line="151" selection-end-line="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Campus_posted.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/userAction/handleBrowseCount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/detail/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1055">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/showRequiredRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="69" column="37" lean-forward="true" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/confirmFinish.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/deleteRequiredRecord.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/ownerLove.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1055">
+          <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/CampusUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Campus_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/deleteMyLove.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/menuOperation.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/owner/getQuestionList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Campus_question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/search/getKeyWords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/accusation/submitAccusation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/help/getHelpData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/help/handleHelp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Help.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/publish/postImagesUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Campus_accusation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Campus_posted.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Owner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2575">
+          <caret line="261" column="5" selection-start-line="261" selection-start-column="5" selection-end-line="261" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="725">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/function/referer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/UserAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2225">
+          <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
           <folding>
             <element signature="e#55#89#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Campus_posted.php">
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/userAction/userAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="37" />
+        <state relative-caret-position="675">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Publish.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="1850">
+          <caret line="77" column="63" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Campus_help/Search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4550">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
           <folding>
-            <element signature="e#6#40#0#PHP" expanded="true" />
+            <element signature="e#55#89#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/campus_help/php/index/showData.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="196" column="5" lean-forward="true" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
+        <state relative-caret-position="325">
+          <caret line="22" column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/laravel-compus-help/app/Http/Controllers/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+          <folding>
+            <element signature="e#39#59#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
+        <state relative-caret-position="1075">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/微信web开发者工具/project/agency/pages/colorui.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="57" lean-forward="true" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/微信web开发者工具/project/agency/pages/formateColorui.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-211">
+          <caret line="1295" column="13" lean-forward="true" selection-start-line="1295" selection-start-column="13" selection-end-line="1295" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/WAMP/Apache/Apache24/htdocs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>

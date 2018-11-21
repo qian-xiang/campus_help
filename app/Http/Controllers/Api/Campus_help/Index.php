@@ -179,14 +179,14 @@ class Index extends Controller
             return ['error'=>'用户头像异常'];
         }
 
-        $str = 'Zjg0NTc4ODYzYWE5MGJjZmFiODZhMjMyNDBhZDYwMjU=';
+        $str = '12345678=';
         //开始获取用户的openId
         $ch = curl_init();//初始化curl
         if (!$ch){
             return ['error'=>'系统错误：curl'];
         }
         $wantSendDataArray = [
-            CURLOPT_URL => 'https://api.weixin.qq.com/sns/jscode2session?appid=wx1c764be0c4ca413a&secret='.base64_decode($str).'&js_code='.$userCode.'&grant_type=authorization_code',
+            CURLOPT_URL => 'https://api.weixin.qq.com/sns/jscode2session?appid=12345678&secret='.base64_decode($str).'&js_code='.$userCode.'&grant_type=authorization_code',
             CURLOPT_HEADER=>false,
             //作为源码输出而不是直接输出网页
             CURLOPT_RETURNTRANSFER=>true
